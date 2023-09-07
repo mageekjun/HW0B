@@ -3,7 +3,9 @@ import java.util.List;
 
 public class ListExercises {
 
-    /** Returns the total sum in a list of integers */
+    /**
+     * Returns the total sum in a list of integers
+     */
     public static int sum(List<Integer> L) {
         int all = 0;
         for (int i : L) {
@@ -25,7 +27,9 @@ public class ListExercises {
         return result;
     }
 
-    /** Returns a list containing the common item of the two given lists */
+    /**
+     * Returns a list containing the common item of the two given lists
+     */
     public static List<Integer> common(List<Integer> L1, List<Integer> L2) {
         List<Integer> result = new ArrayList<>();
 
@@ -41,15 +45,25 @@ public class ListExercises {
     }
 
 
-    /** Returns the number of occurrences of the given character in a list of strings. */
+    /**
+     * Returns the number of occurrences of the given character in a list of strings.
+     */
     public static int countOccurrencesOfC(List<String> words, char c) {
-        Map<String, String> map = new HashMap<>();
+        int count = 0;
 
-        //각각의 캐릭터 구하기 for 루프 이용
-
-
-
-
-        return 0;
+        for (String str : words) {
+            for (char character : str.toCharArray()) {
+                if (character == c) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
+
+
+
+
+
+
